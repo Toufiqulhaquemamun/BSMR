@@ -78,7 +78,6 @@ public class DateVideoPlayer extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         playerView.setPlayer(null);
-        player.release();
         player = null;
 
     }
