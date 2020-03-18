@@ -2,11 +2,14 @@ package com.example.bsmr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -14,21 +17,34 @@ import java.util.ArrayList;
 
 public class SubjectActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
+        getSupportActionBar().hide();
         spinner=findViewById(R.id.spinnersubject);
+        searchView = findViewById(R.id.searchView);
+        searchView.setQueryHint("বিষয় লিখুন");
         ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Select a Subject");
-        arrayList.add("Racecourse");
-        arrayList.add("Dhaka College");
-        arrayList.add("Ctg University");
-        arrayList.add("CPP Language");
-        arrayList.add("Go Language");
-        arrayList.add("AVN SYSTEMS");
+        arrayList.add("বক্তব্য নির্বাচন করুন");
+        arrayList.add("৭ মার্চ ১৯৭১ ঐতিহাসিক ভাষণ\n");
+        arrayList.add("১৬ ই ডিসেম্বর বিজয় দিবস\n");
+
         Spinner(arrayList);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
     }
     public void Spinner(ArrayList<String> arrayList)
     {

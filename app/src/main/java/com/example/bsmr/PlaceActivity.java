@@ -21,15 +21,15 @@ public class PlaceActivity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
+        getSupportActionBar().hide();
         spinner = findViewById(R.id.spinner2);
         ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Select a Place");
-        arrayList.add("Racecourse");
-        arrayList.add("Dhaka College");
-        arrayList.add("Ctg University");
-        arrayList.add("CPP Language");
-        arrayList.add("Go Language");
-        arrayList.add("AVN SYSTEMS");
+        arrayList.add("স্থানের নাম লিখুন");
+        arrayList.add("রেসকোর্স ময়দান");
+        arrayList.add("ঢাকা কলেজ মাঠ");
+        arrayList.add("চট্টগ্রাম বিশ্ববিদ্যালয়");
+        arrayList.add("গোপালগঞ্জ");
+        arrayList.add("সিলেট সরকারি কলেজ মাঠ");
         Spinner(arrayList);
 
     }
