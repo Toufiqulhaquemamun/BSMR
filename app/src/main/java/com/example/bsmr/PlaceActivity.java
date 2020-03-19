@@ -1,6 +1,7 @@
 package com.example.bsmr;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import java.util.ArrayList;
 public class PlaceActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner;
+    AppCompatEditText editText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class PlaceActivity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_place);
         getSupportActionBar().hide();
         spinner = findViewById(R.id.spinner2);
+        //editText = findViewById(R.id.placeSearch);
+
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("স্থানের নাম লিখুন");
         arrayList.add("রেসকোর্স ময়দান");

@@ -16,16 +16,18 @@
         android:layout_weight="0.5"
     android:layout_height="wrap_content">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:foregroundTint="#789123"
-        android:layout_centerInParent="true"
-        android:iconifiedByDefault="false">
-        <requestFocus />
-    </SearchView>
-
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/searchView"
+            app:searchIcon="@drawable/ic_search_black_24dp"
+            android:background="@drawable/search_edittext"
+            app:queryHint="বিষয় লিখুন"
+            android:focusedByDefault="true"
+            android:layout_centerInParent="true"
+            app:iconifiedByDefault="false">
+            <requestFocus />
+        </androidx.appcompat.widget.SearchView>
 </RelativeLayout>
 
     <Spinner
@@ -34,5 +36,21 @@
         android:layout_gravity="center"
         style="@style/mySpinnerItemStyle"
         android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="0dp"
+        >
+        <Button
+            android:id="@+id/butttoncalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedtextview"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:text="অনুসন্ধান করুন"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></Button>
+    </RelativeLayout>
 
 </LinearLayout>
