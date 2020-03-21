@@ -5,24 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="3"
     tools:context=".PlaceActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="স্থান নির্বাচন করুন"
-        android:layout_marginTop="60dp"
-        android:textColor="#000000"
-        android:padding="20dp"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="স্থান নির্বাচন করুন"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:padding="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_height="wrap_content">
+
+        android:layout_weight="1.5"
+        android:layout_height="0dp">
 
 <!--       <androidx.appcompat.widget.AppCompatEditText-->
 <!--           android:drawableLeft="@drawable/ic_search_black_24dp"-->
@@ -38,6 +46,7 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:id="@+id/placeSearchview"
             app:searchIcon="@drawable/ic_search_black_24dp"
             android:background="@drawable/search_edittext"
             app:queryHint="স্থানের নাম লিখুন"
@@ -45,19 +54,24 @@
             app:iconifiedByDefault="false">
             <requestFocus />
         </androidx.appcompat.widget.SearchView>
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/placeSearchview" />
 
     </RelativeLayout>
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        style="@style/mySpinnerItemStyle"
-        android:layout_height="wrap_content" />
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        style="@style/mySpinnerItemStyle"-->
+<!--        android:layout_height="wrap_content" />-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:layout_height="0dp"
         >
         <Button
